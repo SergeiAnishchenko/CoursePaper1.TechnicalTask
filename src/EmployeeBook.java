@@ -21,13 +21,13 @@ public class EmployeeBook {
         }
     }
 
-    public void getSummOfSalary() {
+    public double getSummOfSalary() {
         double sum = 0;
         for (int i = 0; i < employees.length; i++) {
             Employee employee = employees[i];
             sum += employee.getSalary();
         }
-        System.out.println("Сумма затрат на зарплаты в месяц составляет " + sum + " рублей.");
+        return sum;
     }
 
     public void getEmployeeMinimumSalary() {
@@ -63,13 +63,8 @@ public class EmployeeBook {
     }
 
     public void getAverageSalary() {
-        double sum = 0;
         double averageSalary;
-        for (int i = 0; i < employees.length; i++) {
-            Employee employee = employees[i];
-            sum += employee.getSalary();
-        }
-        averageSalary = sum / employees.length;
+        averageSalary = this.getSummOfSalary() / employees.length;
         System.out.println("Среднее значение зарплат составляет: " + averageSalary + " рублей.");
     }
 

@@ -16,7 +16,7 @@ public class Main {
         employeeBook.printAllEmpoyees();
         System.out.println();
 
-        employeeBook.getSummOfSalary();
+        System.out.println("Сумма зарплат в месяц составляет " + employeeBook.getSummOfSalary() + " рублей.");
         System.out.println();
 
         employeeBook.getEmployeeMinimumSalary();
